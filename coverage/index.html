@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-06T17:41:14-05:00">2021-02-06T17:41:14-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-06T17:55:36-05:00">2021-02-06T17:55:36-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">10.99%</span></span>
+    (<span class="covered_percent"><span class="red">15.18%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.11
+         0.2
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>12</b> files in total.
-    <b>182</b> relevant lines. 
-    <span class="green"><b>20</b> lines covered</span> and
+    <b>191</b> relevant lines. 
+    <span class="green"><b>29</b> lines covered</span> and
     <span class="red"><b>162</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -153,11 +153,11 @@
       <tr>
         <td class="strong"><a href="#f0558aeb8a782030182d85909ff1e64529d81e32" class="src_link" title="app/models/chore.rb">app/models/chore.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>22</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -256,19 +256,19 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="green">95.24%</span></span>
+    (<span class="covered_percent"><span class="green">96.67%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.96
+       <span class="green">
+         1.25
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>4</b> files in total.
-    <b>21</b> relevant lines. 
-    <span class="green"><b>20</b> lines covered</span> and
+    <b>30</b> relevant lines. 
+    <span class="green"><b>29</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -308,11 +308,11 @@
       <tr>
         <td class="strong"><a href="#f0558aeb8a782030182d85909ff1e64529d81e32" class="src_link" title="app/models/chore.rb">app/models/chore.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>22</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -2259,8 +2259,8 @@
     <h3>app/models/chore.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2289,10 +2289,112 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">    belongs_to :tasks</code>
+          <code class="ruby">    belongs_to :task</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    # Validations</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    validates_date :due_on</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">    # Scopes</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    scope :by_task,             lambda{joins(&quot;JOIN tasks ON tasks.id = chores.task_id&quot;).order(&quot;tasks.name&quot;)}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    scope :chronological,       lambda{order(:due_on, :completed)}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    scope :pending,             lambda{where(completed: false)}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    scope :done,                lambda{where(completed: true)}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    scope :upcoming,            lambda{where(&quot;due_on &gt;= ?&quot;, Date.today)}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    scope :past,                lambda{where(&quot;due_on &lt; ?&quot;, Date.today)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    # Methods</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def status</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        return completed ? &quot;Completed&quot; : &quot;Pending&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>

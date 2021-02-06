@@ -34,7 +34,7 @@
   },
   "Unit Tests": {
     "coverage": {
-      "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/child.rb": [
+      "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/chore.rb": [
         1,
         null,
         1,
@@ -42,15 +42,19 @@
         null,
         null,
         1,
-        1,
+        null,
+        null,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
         null,
         null,
         1,
-        1,
+        2,
         null,
-        null,
-        1,
-        0,
         null,
         null
       ],
@@ -75,11 +79,24 @@
         null,
         null
       ],
-      "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/chore.rb": [
+      "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/child.rb": [
         1,
         null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/controllers/application_controller.rb": [
@@ -334,6 +351,6 @@
         0
       ]
     },
-    "timestamp": 1612651274
+    "timestamp": 1612652136
   }
 }
