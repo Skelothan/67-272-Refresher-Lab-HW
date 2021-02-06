@@ -34,4 +34,23 @@ class ChildTest < ActiveSupport::TestCase
     end
   end
 
+  context "Creating a child, chore, and task context" do
+    setup do
+      create_children
+      create_tasks
+      create_chores
+    end
+    teardown do
+      destroy_chores
+      destroy_tasks
+      destroy_children
+    end
+
+    should "have a method that returns the number of points earned" do
+      assert_equal 4, @alex.points_earned
+      assert_equal 1, @mark.points_earned
+    end
+
+  end
+
 end
