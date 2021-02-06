@@ -39,6 +39,15 @@
         null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        3,
+        2,
+        null,
         null
       ],
       "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/application_record.rb": [
@@ -46,32 +55,32 @@
         1,
         null
       ],
-      "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/child.rb": [
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/chore.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/models/child.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
         0,
         null,
-        0,
-        0,
-        0
+        null
       ],
       "/Users/jonathanfischer/Documents/67-373 Information Systems Consulting Project/Refresher Lab HW/lab5-choretracker-starter/app/controllers/application_controller.rb": [
         0,
@@ -325,6 +334,6 @@
         0
       ]
     },
-    "timestamp": 1612650780
+    "timestamp": 1612651012
   }
 }

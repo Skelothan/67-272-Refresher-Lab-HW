@@ -1,7 +1,14 @@
 class Task < ApplicationRecord
     # Relationships
-    has_many :chore
-    has_many :child
+    has_many :chores
+    has_many :children, through: :chores
 
-    
+    # Validations
+    validates_presence_of :name
+    validates_numericality_of :points, only_integer: true, greater_than_or_equal_to: 0
+
+    # Scopes
+    scope :alphabetical,        lambda{order(:name)}
+    scope :active,              lambda{where(active: true)}
+
 end
